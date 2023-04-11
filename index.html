@@ -13,36 +13,161 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="d-flex flex-column h-100">
-<header>
-    <nav class="navbar navbar-expand-lg bg-light">
+
+<nav class="navbar navbar-expand-lg position-absolute w-100 sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="img/infant-group-logo.png" alt="Infant Group" width="170">
+        </a>
+        <div class="offcanvas offcanvas-end" id="navbar">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">Навігація</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex align-items-center justify-content-center justify-content-lg-start ms-lg-auto">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item mb-4 mb-lg-0"><a class="btn btn-danger text-white text-uppercase rounded-0" href="#brands">Бренди</a></li>
+                    <li class="nav-item mb-4 mb-lg-0 ms-lg-3 ms-xl-4"><a class="btn btn-success text-white text-uppercase rounded-0" href="#faq">Питання</a></li>
+                    <li class="nav-item mb-4 mb-lg-0 ms-lg-3 ms-xl-4"><a class="btn btn-info text-white text-uppercase rounded-0" href="#reviews">Відгуки</a></li>
+                    <li class="nav-item mb-4 mb-lg-0 ms-lg-3 ms-xl-4"><a class="btn btn-secondary text-white text-uppercase rounded-0" href="#contact">Контакти</a></li>
+                </ul>
+            </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+<main class="flex-grow-1 flex-shrink-0">
+    <section class="hero py-5 bg-light position-relative d-flex align-items-center" style="background-image: url(img/header-bg.webp);">
+        <div class="container pt-5 position-relative">
+            <h1 class="display-3 fw-bold mb-3 mb-lg-4 me-3 me-lg-0"><span class="text-success">Ексклюзивні дитячі товари</span><br><span class="text-info">для вашого бізнесу</span></h1>
+            <p class="lead mb-0">Професійна дистрибуція дитячих товарів відомих французьких брендів в Україні. <br>Доставка, підтримка, навчання, партнерство.</p>
+            <!-- TODO: set correct adaptive position for svg text circle -->
+            <!-- TODO: add here play video btn -->
+            <svg class="position-absolute top-100 start-100 translate-middle" viewBox="0 0 300 300" width="300" height="300">
+                <defs><path id="circle" fill="none" stroke="none" d="M 32.550491,148.48008 A -108.15144,-108.15144 0 0 1 140.70194,40.328644 -108.15144,-108.15144 0 0 1 248.85338,148.48008 -108.15144,-108.15144 0 0 1 140.70194,256.63153 -108.15144,-108.15144 0 0 1 32.550491,148.48008 Z"></path></defs>
+                <text font-size="18" letter-spacing="4.5" font-weight="700" fill="rgb(200 32 66 / 62%)">
+                    <textPath xlink:href="#circle" startOffset="15">НАЙКРАЩЕ ДЛЯ БІЗНЕСУ - НАЙКРАЩЕ ДЛЯ ДІТЕЙ - </textPath>
+                </text>
+            </svg>
+        </div>
+    </section>
+    <section id="brands" class="overflow-x-hidden">
         <div class="container">
-            <a class="navbar-brand" href="#">LOGO</a>
-            <div class="offcanvas offcanvas-end" id="navbar">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title">Навігація</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <div class="row">
+                <div class="col-lg-6 brand-logo py-3 d-flex align-items-center justify-content-center position-relative">
+                    <div class="z-n1 position-absolute vw-100 h-100 top-0 end-0 bg-danger"></div>
+                    <figure class="text-center p-3 p-lg-5"><img class="img-fluid" src="img/redcastle.png" alt="Red Castle"></figure>
                 </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#">Бренди</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Питання</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Відгуки</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Контакти</a></li>
-                    </ul>
+                <div class="col-lg-6">
+                    <div class="content h-100 d-flex flex-column justify-content-center p-3 p-lg-5">
+                        <p>RED CASTLE - добробут і здоровʼя дітей</p>
+                        <p>Більше 25 років RED CASTLE створює практичну, якісну та ергономічну продукцію для догляду за дитиною.</p>
+                        <p>RED CASTLE - це науково-обґрунтований підхід до догляду за немовлятами, прагнення поєднати корисне для дитини і мами зі зручністю, комфортом та стилем!</p>
+                    </div>
                 </div>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="row">
+                <!-- TODO: fix "img/beaba.png" is to large -->
+                <div class="col-lg-6 brand-logo py-3 d-flex align-items-center justify-content-center position-relative order-lg-2">
+                    <div class="z-n1 position-absolute vw-100 h-100 top-0 start-0 bg-success"></div>
+                    <figure class="text-center p-3 p-lg-5"><img class="img-fluid" src="img/beaba.png" alt="Beaba"></figure>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="content h-100 d-flex flex-column justify-content-center p-3 p-lg-5">
+                        <p>Бути батьками - це дитяча гра.</p>
+                        <p>Ми часто чуємо, що нелегко бути батьками... То чому б не полегшити життя дорослим, зробивши його кращим для наших дітей?</p>
+                        <p>Протягом 30 років компанія BEABE створює якісну та просту у використанні продукцію для догляду за дітьми, щоб зробити життя молодих батьків стильним та приємним!</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </nav>
-</header>
-<section class="hero">
-    <div class="container">
-        <h3>hero</h3>
-    </div>
-</section>
-<footer class="flex-shrink-0 mt-auto">
+    </section>
+    <section class="bg-light bg-light-subtle">
+        <div class="container">
+            <div class="row align-items-lg-center">
+                <div class="col-lg-7 py-5">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/hEt2_QEaUKE?rel=0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-5 py-5">
+                    <div class="content h-100 d-flex flex-column justify-content-center p-3 p-lg-5">
+                        <div class="display-6 fw-bold mb-4">Краще один раз <span class="text-info">побачити</span></div>
+                        <p class="mb-0">Ми створили спеціальне відео для того, щоб Вам було зручно познайомитись з нашими перевагами та пропозиціями, які допоможуть Вашому бізнесу розвиватися краще!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="redcastle">
+        <div class="bg-danger text-white">
+            <div class="container py-5">
+                <h2 class="display-5 mb-0 fw-bold text-uppercase text-center">Знайомтеся - Red Castle!</h2>
+            </div>
+        </div>
+        <div class="bg-danger-subtle">
+            <div class="container content py-5 lead text-center">
+                <p>Флагман бренду Red Castle - ергономічний матрацик Cocoonababy.</p>
+                <p>Новонароджені малята сплять до 20 годин на добу. Саме тому так важливо створити для них сприятливу та безпечну атмосферу для здорового сну. Cocoonababy від Red Castle – це ергономічний кокон, який можна використовувати в будь-який час дня чи ночі задля комфорту та благополуччя малюка!</p>
+            </div>
+        </div>
+        <div class="container py-5 text-center">
+            <img src="img/#" alt="Red Castle - ергономічний матрацик Cocoonababy" class="img-fluid">
+        </div>
+        <div class="bg-danger text-white">
+            <div class="container py-5">
+                <h3 class="display-6 mb-0 fw-bold text-uppercase text-center">Інші продукти та аксесуари Red Castle</h3>
+            </div>
+        </div>
+        <div class="container py-5 text-center">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light">
+                        <img class="card-img-top p-3 pb-1" src="img/son.png" alt="Для сну">
+                        <div class="card-body">
+                            <small class="card-subtitle fw-light l-spacing-1">аксесуари</small>
+                            <div class="card-title mt-2 fs-5 fw-bolder">Для сну</div>
+                            <button class="btn btn-danger btn-lg text-uppercase w-100 l-spacing-1">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light">
+                        <img class="card-img-top p-3 pb-1" src="img/progulka.png" alt="Для прогулянки">
+                        <div class="card-body">
+                            <small class="card-subtitle fw-light l-spacing-1">аксесуари</small>
+                            <div class="card-title mt-2 fs-5 fw-bolder">Для прогулянки</div>
+                            <button class="btn btn-danger btn-lg text-uppercase w-100 l-spacing-1">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light">
+                        <img class="card-img-top p-3 pb-1" src="img/dogljad.png" alt="Для догляду">
+                        <div class="card-body">
+                            <small class="card-subtitle fw-light l-spacing-1">аксесуари</small>
+                            <div class="card-title mt-2 fs-5 fw-bolder">Для догляду</div>
+                            <button class="btn btn-danger btn-lg text-uppercase w-100 l-spacing-1">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light">
+                        <img class="card-img-top p-3 pb-1" src="img/mamam.png" alt="Для матусь">
+                        <div class="card-body">
+                            <small class="card-subtitle fw-light l-spacing-1">аксесуари</small>
+                            <div class="card-title mt-2 fs-5 fw-bolder">Для матусь</div>
+                            <button class="btn btn-danger btn-lg text-uppercase w-100 l-spacing-1">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="flex-shrink-0">
     <div class="container">
         <h3>footer</h3>
     </div>

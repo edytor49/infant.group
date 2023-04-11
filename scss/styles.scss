@@ -11,7 +11,7 @@
 
 // Toggle global options
 $enable-gradients: false;
-$enable-shadows: true;
+$enable-shadows: false;
 $enable-dark-mode: false;
 
 $container-max-widths: (
@@ -23,10 +23,24 @@ $container-max-widths: (
 );
 
 // Customize some defaults
-$body-color: #363636;
-$body-bg: #fff;
-$border-radius: .4rem;
-$success: #7952b3;
+
+//$body-color: #363636;
+//$body-bg: #fff;
+//$border-radius: .4rem;
+$success: #bbcc33;
+$danger: #c82042;
+$info: #02afe9;
+
+$btn-focus-width: 0;
+$btn-box-shadow: none;
+$btn-close-focus-shadow: none;
+$btn-font-size-lg: 1rem;
+$btn-padding-y-lg: 0.75rem;
+
+$card-border-width: 0;
+$card-border-radius: 0;
+$card-subtitle-color: grey;
+$card-title-spacer-y: 1rem;
 
 // Required
 @import "bootstrap/scss/functions";
@@ -39,7 +53,7 @@ $success: #7952b3;
 @import "bootstrap/scss/reboot";
 
 @import "bootstrap/scss/type";
-// @import "bootstrap/scss/images";
+@import "bootstrap/scss/images";
 @import "bootstrap/scss/containers";
 @import "bootstrap/scss/grid";
 // @import "bootstrap/scss/tables";
@@ -50,7 +64,7 @@ $success: #7952b3;
 // @import "bootstrap/scss/button-group";
 @import "bootstrap/scss/nav";
 @import "bootstrap/scss/navbar";
-// @import "bootstrap/scss/card";
+@import "bootstrap/scss/card";
 // @import "bootstrap/scss/breadcrumb";
 // @import "bootstrap/scss/accordion";
 // @import "bootstrap/scss/pagination";
@@ -69,18 +83,75 @@ $success: #7952b3;
 // @import "bootstrap/scss/placeholders";
 
 // Helpers
-//@import "bootstrap/scss/helpers";
+@import "bootstrap/scss/helpers";
 
 // Utilities
 @import "bootstrap/scss/utilities/api";
-
 
 //
 // Custom styles
 //
 
-//@import "icon-list";
-
-body {
-
+.content {
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
+
+figure {
+  margin-bottom: 0;
+}
+
+.l-spacing-1 {
+  letter-spacing: 1px;
+}
+
+// Hero
+.hero {
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 75vh;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, white 0, transparent 100%);
+  }
+}
+
+.brand-logo {
+  min-height: 400px;
+
+  &-shape {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+}
+
+.card {
+  &-subtitle {
+    letter-spacing: 1px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .hero:before {
+    background-image: linear-gradient(90deg, white 0, transparent 85%);
+  }
+}
+
+// Navbar
+//.nav {
+//  &-item {
+//
+//  }
+//}
